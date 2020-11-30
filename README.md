@@ -1,6 +1,6 @@
 # raincloudplots 
 
-![Raincloud_logo](https://github.com/jorvlan/openvis/blob/master/figures/rainclouds5.PNG)
+![Raincloud_logo](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/Dia1.png)
 
 <pre>
 Allen, M., Poggiali, D., Whitaker, K., Marshall, T., van Langen, J., R., & Kievit, R. A. (2020). 
