@@ -1,5 +1,12 @@
 # raincloudplots
 
+<pre>
+Allen, M., Poggiali, D., Whitaker, K., Marshall, T., van Langen, J., R., & Kievit, R. A. (2020). (re-submission in prep.)
+Raincloud plots: a multi-platform tool for robust data visualization. Wellcome open research.
+<a href="https://github.com/jorvlan/raincloudplots">https://github.com/jorvlan/raincloudplots</a>
+</pre>
+
+
 ### This repository serves as the R package for the revisited version of: [Raincloud plots: a multi-platform tool for robust data visualization](https://wellcomeopenresearch.org/articles/4-63) (in prep.).
 
 
