@@ -108,7 +108,7 @@ scale_x_continuous(breaks=c(1,2), labels=c("Group1", "Group2"), limits=c(0, 3)) 
 
 raincloud_1_v
 ```
-![Raincloud example](figures/figure_1x1_v.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig2.png)
 
 ### Raincloud 1 x 1 repeated measures
 
