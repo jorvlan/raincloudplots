@@ -1,0 +1,26 @@
+Package: raincloudplots
+Type: Package
+Title: The easy way to create raincloud plots 
+Version: 0.1.0
+Author: person("Jordy", "van Langen", email = "jordyvanlangen@gmail.com", role = c("aut", "cre"))
+Maintainer: The package maintainer <jordyvanlangen@gmail.com>
+Description: An easy way to create common raincloud plots (e.g., for repeated measures). 
+    Next to this package, two extensive and detailed code tutorials on how to make rainclouds with more complex between/within-subjects designs are available:
+    1. [https://github.com/jorvlan/open-visualizations] 
+    2. [https://github.com/RainCloudPlots/RainCloudPlots].
+URL: https://github.com/jorvlan/raincloudplots
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends:
+	R (>= 3.4.0)
+Imports:
+  ggplot2,
+  gghalves,
+  magrittr,
+  dplyr
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

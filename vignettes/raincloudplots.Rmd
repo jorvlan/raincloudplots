@@ -1,0 +1,299 @@
+---
+title: "raincloudplots"
+author: "Jordy van Langen"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{raincloudplots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(raincloudplots)
+library(ggplot2)
+```
+
+
+This vignette demonstrates the different types of *raincloudplots* that one can make with this package.
+
+## Background
+
+We have developed this package to visualize data in rainclouds, which are, for instance, suited for repeated measures data. 
+
+- It all started with the [pre-print of raincloudplots](https://wellcomeopenresearch.org/articles/4-63) in 2019 and accompanying [GitHub repository RainCloudPlots](https://github.com/RainCloudPlots/RainCloudPlots)
+- In the beginning of 2020, a tutorial called [‘open-visualizations’](https://github.com/jorvlan/open-visualizations) was released and turned out to be a valuable addition to the previously published pre-print. This tutorial provides detailed and extensive R code to create robust and transparent repeated measures visualizations, by showing the slope change for each individual data point over time. To date (30-11-2020), this tutorial has been cited in 15 scientific papers. However, using this tutorial requires sufficient R programming knowledge and might therefore not be suitable for non-R experts. 
+- Therefore, we have created this dedicated [raincloudplots](https://github.com/jorvlan/raincloudplots) package. This package is tailored towards easy visualization of grouped and repeated measures data. Moreover, it also provides individually linked repeated measures visualizations, which add detail and richness to a multitude of between/within-subject designs. Researchers that would like to visualize more complex repeated measures designs, for instance with more groups and more time-points, please see our extensive tutorials:
+  - [https://github.com/RainCloudPlots/RainCloudPlots](https://github.com/RainCloudPlots/RainCloudPlots)
+  - [https://github.com/jorvlan/open-visualizations](https://github.com/jorvlan/open-visualizations)
+
+## data_1x1
+
+- `data_1x1` creates the long-format data.frame that is needed for 1-by-1 rainclouds.
+  - `array_1` the first array of datapoints to be plotted
+  - `array_2` the second array of datapoints to be plotted
+  - `jit_distance` the amount of distance between jittered datapoints (0.9 by default)
+  - `jit_seed` the amount used in set.seed() (321 by default)
+
+```{r}
+df_1x1 <- data_1x1(
+  array_1 = iris$Sepal.Length[1:50],
+  array_2 = iris$Sepal.Length[51:100],
+  jit_distance = .09,
+  jit_seed = 321)
+
+head(df_1x1)
+tail(df_1x1)
+```
+
+## raincloud_1x1
+
+- `raincloud_1x1` creates the 1-by-1 comparison for grouped data.
+  - `data` the data.frame created with `data_1x1`
+  - `colors` concatenated string for both colors
+  - `fills` concatenated string for both both fills
+  - `size` size of the data 
+  - `alpha` alpha of the data
+  - `ort` vertical or horizontal display of rainclouds
+
+```{r}
+raincloud_1_h <- raincloud_1x1(
+  data = df_1x1, 
+  colors = (c('dodgerblue','darkorange')), 
+  fills = (c('dodgerblue','darkorange')), 
+  size = 1, 
+  alpha = .6, 
+  ort = 'h') +
+
+scale_x_continuous(breaks=c(1,2), labels=c("Group1", "Group2"), limits=c(0, 3)) +
+  xlab("Groups") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_1_h
+```
+
+```{r}
+raincloud_1_v <- raincloud_1x1(
+  data = df_1x1, 
+  colors = (c('dodgerblue','darkorange')), 
+  fills = (c('dodgerblue','darkorange')), 
+  size = 1, 
+  alpha = .6, 
+  ort = 'v') +
+
+scale_x_continuous(breaks=c(1,2), labels=c("Group1", "Group2"), limits=c(0, 3)) +
+  xlab("Groups") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_1_v
+```
+
+## raincloud_1x1_repmes
+
+- `raincloud_1x1_repmes` creates a 1-by-1 repeated measures raincloud.
+  - `data` the data.frame created with `data_1x1`
+  - `colors` concatenated string for both colors
+  - `fills`  concatenated string for both fills
+  - `line_color` color of the lines
+  - `line_alpha` alpha of the lines
+  - `size` size of the data
+  - `alpha` alpha of the data
+  - `align_clouds` FALSE if spreaded on different x-axis ticks, TRUE if aligned on same x-axis tick
+
+```{r}
+raincloud_2 <- raincloud_1x1_repmes(
+  data = df_1x1,
+  colors = (c('dodgerblue', 'darkorange')),
+  fills = (c('dodgerblue', 'darkorange')),
+  line_color = 'gray',
+  line_alpha = .3,
+  size = 1,
+  alpha = .6,
+  align_clouds = FALSE) +
+ 
+scale_x_continuous(breaks=c(1,2), labels=c("Pre", "Post"), limits=c(0, 3)) +
+  xlab("Time") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_2
+```
+
+```{r}
+raincloud_2_aligned <- raincloud_1x1_repmes(
+  data = df_1x1,
+  colors = (c('dodgerblue', 'darkorange')),
+  fills = (c('dodgerblue', 'darkorange')),
+  line_color = 'gray',
+  line_alpha = .3,
+  size = 1,
+  alpha = .6,
+  align_clouds = TRUE) +
+ 
+scale_x_continuous(breaks=c(1,2), labels=c("Pre", "Post"), limits=c(0, 3)) +
+  xlab("Time") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_2_aligned
+```
+
+## data_2x2
+
+- `data_2x2` creates the long-format data.frame needed for 2 x 2 repeated measures rainclouds.
+  - `array_1` the first array of datapoints to be plotted
+  - `array_2` the second array of datapoints to be plotted
+  - `array_3` the array of datapoints to be plotted
+  - `array_4` the array of datapoints to be plotted
+  - `array_5` the array of datapoints to be plotted (OPTIONAL: only needed for 2x3 repeated measures, see below)
+  - `array_6` the array of datapoints to be plotted (OPTIONAL: only needed for 2x3 repeated measures, see below)
+  - `labels` concatenated string of both group labels
+  - `spread_x_ticks` FALSE if 2 x-ticks, TRUE if 4 x-ticks
+  - `jit_distance` the amount of distance between jittered datapoints (0 by default)
+  - `jit_seed` the amount used in set.seed() (321 by default)
+  
+```{r}
+df_2x2 <- data_2x2(
+  array_1 = iris$Sepal.Length[1:50],
+  array_2 = iris$Sepal.Length[51:100],
+  array_3 = iris$Sepal.Length[101:150],
+  array_4 = iris$Sepal.Length[81:130],
+  labels = (c('congruent','incongruent')),
+  jit_distance = .09,
+  jit_seed = 321,
+  spread_x_ticks = FALSE) 
+
+head(df_2x2)
+tail(df_2x2)
+```
+
+```{r}
+df_2x2_spread <- data_2x2(
+  array_1 = iris$Sepal.Length[1:50],
+  array_2 = iris$Sepal.Length[51:100],
+  array_3 = iris$Sepal.Length[101:150],
+  array_4 = iris$Sepal.Length[81:130],
+  labels = (c('congruent','incongruent')),
+  jit_distance = .09,
+  jit_seed = 321,
+  spread_x_ticks = TRUE) 
+
+head(df_2x2_spread)
+tail(df_2x2_spread)
+```
+
+## raincloud_2x2_repmes
+
+- `raincloud_2x2_repmes` creates the 2 x 2 repeated measures raincloud.
+  - `data` the data.frame created with `data_2x2`
+  - `colors` concatenated string for both colors
+  - `fills`  concatenated string for both fills
+  - `line_color` color of the lines (Only when `spread_x_ticks` TRUE)
+  - `line_alpha` alpha of the lines (Only when `spread_x_ticks` TRUE)
+  - `size` size of the data
+  - `alpha` alpha of the data
+  - `spread_x_ticks` FALSE if 2 x-ticks, TRUE if 4 x-ticks
+  
+```{r}
+raincloud_2x2 <- raincloud_2x2_repmes(
+  data = df_2x2,
+  colors = (c('dodgerblue', 'darkorange', 'dodgerblue', 'darkorange')),
+  fills = (c('dodgerblue', 'darkorange', 'dodgerblue', 'darkorange')),
+  size = 1,
+  alpha = .6,
+  spread_x_ticks = FALSE) +
+
+scale_x_continuous(breaks=c(1,2), labels=c("Pre", "Post"), limits=c(0, 3)) +
+  xlab("Time") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_2x2
+
+```
+
+```{r}
+raincloud_2x2_spread <- raincloud_2x2_repmes(
+  data = df_2x2_spread,
+  colors = (c('dodgerblue', 'darkorange', 'dodgerblue', 'darkorange')),
+  fills = (c('dodgerblue', 'darkorange', 'dodgerblue', 'darkorange')),
+  line_color = 'gray',
+  line_alpha = .3,
+  size = 1,
+  alpha = .6,
+  spread_x_ticks = TRUE) +
+
+scale_x_continuous(breaks=c(1,2,3,4), labels=c("Pre", "Post", "Pre", "Post"), limits=c(0, 5)) +
+  xlab("Time") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_2x2_spread
+```
+
+## raincloud_2x3_repmes
+
+```{r}
+df_2x3 <- data_2x2(
+  array_1 = iris$Sepal.Length[1:50],
+  array_2 = iris$Sepal.Length[51:100],
+  array_3 = iris$Sepal.Length[101:150],
+  array_4 = iris$Sepal.Length[81:130],
+  array_5 = iris$Sepal.Length[21:70],
+  array_6 = iris$Sepal.Length[41:90],
+  labels = (c('congruent','incongruent')),
+  jit_distance = .05,
+  jit_seed = 321) 
+
+head(df_2x3)
+tail(df_2x3)
+```
+
+
+
+```{r}
+raincloud_2x3_vertical <- raincloud_2x3_repmes(
+  data = df_2x3,
+  colors = (c('dodgerblue', 'darkorange', 'dodgerblue',
+              'darkorange', 'dodgerblue', 'darkorange')),
+  fills = (c('dodgerblue', 'darkorange', 'dodgerblue',
+             'darkorange', 'dodgerblue', 'darkorange')),
+  size = 1,
+  alpha = .6,
+  ort = 'v') +
+
+scale_x_continuous(breaks=c(1,2,3), labels=c("T-1", "T-2", "T-3"), limits=c(0, 4)) +
+  xlab("Time") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_2x3_vertical
+```
+
+```{r}
+raincloud_2x3_horizontal <- raincloud_2x3_repmes(
+  data = df_2x3,
+  colors = (c('dodgerblue', 'darkorange', 'dodgerblue',
+              'darkorange', 'dodgerblue', 'darkorange')),
+  fills = (c('dodgerblue', 'darkorange', 'dodgerblue',
+             'darkorange', 'dodgerblue', 'darkorange')),
+  size = 1,
+  alpha = .6,
+  ort = 'h') +
+
+scale_x_continuous(breaks=c(1,2,3), labels=c("T-1", "T-2", "T-3"), limits=c(0, 4)) +
+  xlab("Time") + 
+  ylab("Score") +
+  theme_classic()
+
+raincloud_2x3_horizontal
+```
+
