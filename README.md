@@ -1,4 +1,6 @@
-# raincloudplots (R package)
+# raincloudplots 
+
+![Raincloud_logo](https://github.com/jorvlan/openvis/blob/master/figures/rainclouds5.PNG)
 
 <pre>
 Allen, M., Poggiali, D., Whitaker, K., Marshall, T., van Langen, J., R., & Kievit, R. A. (2020). 
