@@ -2,7 +2,7 @@
 
 ![Raincloud_logo](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/Dia1.png)
 
-Citation (awaiting submission): 
+If you use this package for your research, please cite it, thank you.
 
 <pre>
 Allen, M., Poggiali, D., Whitaker, K., Marshall, T., van Langen, J., R., & Kievit, R. A. (2020). 
@@ -11,7 +11,7 @@ Raincloud plots: a multi-platform tool for robust data visualization. <b>Wellcom
 (re-submission in prep.)
 </pre>
 
-- This repository serves as the R package for the revisited version of: [Raincloud plots: a multi-platform tool for robust data visualization](https://wellcomeopenresearch.org/articles/4-63) (in prep.).
+### Background
 
 It all started with the [pre-print of raincloudplots](https://wellcomeopenresearch.org/articles/4-63) in 2019 and accompanying [GitHub repository RainCloudPlots](https://github.com/RainCloudPlots/RainCloudPlots). In the beginning of 2020, a tutorial called [‘open-visualizations’](https://github.com/jorvlan/open-visualizations) was released and turned out to be a valuable addition to the previously published pre-print. This tutorial provides detailed and extensive R code to create robust and transparent repeated measures visualizations, by showing the slope change for each individual data point over time. To date (30-11-2020), this tutorial has been cited in 15 scientific papers. However, using this tutorial requires sufficient R programming knowledge and might therefore not be suitable for non-R experts. Therefore, we have created this dedicated [raincloudplots](https://github.com/jorvlan/raincloudplots) package. This package is tailored towards easy visualization of grouped and repeated measures data. Moreover, it also provides individually linked repeated measures visualizations, which add detail and richness to a multitude of between/within-subject designs. Researchers that would like to visualize more complex repeated measures designs, for instance with more groups and more time-points, please see our extensive tutorials:
 
