@@ -1,14 +1,10 @@
 # raincloudplots
-![Raincloud example](figures/rainclouds5.PNG)
 
 ### This repository serves as the R package for the revisited version of: [Raincloud plots: a multi-platform tool for robust data visualization](https://wellcomeopenresearch.org/articles/4-63) (in prep.).
 
-### An example figure
-![Raincloud example](figures/figure19.png)
 
-- It all started with the [pre-print of raincloudplots](https://wellcomeopenresearch.org/articles/4-63) in 2019 and accompanying [GitHub repository RainCloudPlots](https://github.com/RainCloudPlots/RainCloudPlots)
-- In the beginning of 2020, a tutorial called [‘open-visualizations’](https://github.com/jorvlan/open-visualizations) was released and turned out to be a valuable addition to the previously published pre-print. This tutorial provides detailed and extensive R code to create robust and transparent repeated measures visualizations, by showing the slope change for each individual data point over time. To date (30-11-2020), this tutorial has been cited in 15 scientific papers. However, using this tutorial requires sufficient R programming knowledge and might therefore not be suitable for non-R experts. 
-- Therefore, we have created this dedicated [raincloudplots](https://github.com/jorvlan/raincloudplots) package. This package is tailored towards easy visualization of grouped and repeated measures data. Moreover, it also provides individually linked repeated measures visualizations, which add detail and richness to a multitude of between/within-subject designs. Researchers that would like to visualize more complex repeated measures designs, for instance with more groups and more time-points, please see our extensive tutorials:
+It all started with the [pre-print of raincloudplots](https://wellcomeopenresearch.org/articles/4-63) in 2019 and accompanying [GitHub repository RainCloudPlots](https://github.com/RainCloudPlots/RainCloudPlots). In the beginning of 2020, a tutorial called [‘open-visualizations’](https://github.com/jorvlan/open-visualizations) was released and turned out to be a valuable addition to the previously published pre-print. This tutorial provides detailed and extensive R code to create robust and transparent repeated measures visualizations, by showing the slope change for each individual data point over time. To date (30-11-2020), this tutorial has been cited in 15 scientific papers. However, using this tutorial requires sufficient R programming knowledge and might therefore not be suitable for non-R experts. Therefore, we have created this dedicated [raincloudplots](https://github.com/jorvlan/raincloudplots) package. This package is tailored towards easy visualization of grouped and repeated measures data. Moreover, it also provides individually linked repeated measures visualizations, which add detail and richness to a multitude of between/within-subject designs. Researchers that would like to visualize more complex repeated measures designs, for instance with more groups and more time-points, please see our extensive tutorials:
+
   - [https://github.com/RainCloudPlots/RainCloudPlots](https://github.com/RainCloudPlots/RainCloudPlots)
   - [https://github.com/jorvlan/open-visualizations](https://github.com/jorvlan/open-visualizations)
 
@@ -25,7 +21,7 @@
 
 ```r
 if (!require(remotes)) {
-    install.packages('remotes')
+    install.packages("remotes")
 }
 remotes::install_github('jorvlan/raincloudplots')
 
@@ -108,7 +104,7 @@ scale_x_continuous(breaks=c(1,2), labels=c("Group1", "Group2"), limits=c(0, 3)) 
 
 raincloud_1_v
 ```
-![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/figtest3.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig_2.png)
 
 ### Raincloud 1 x 1 repeated measures
 
@@ -140,7 +136,7 @@ scale_x_continuous(breaks=c(1,2), labels=c("Pre", "Post"), limits=c(0, 3)) +
 
 raincloud_2
 ```
-![Raincloud example](figures/figure_1x1_rm.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig_3.png)
 
 ```r
 raincloud_2_aligned <- raincloud_1x1_repmes(
@@ -160,7 +156,7 @@ scale_x_continuous(breaks=c(1,2), labels=c("Pre", "Post"), limits=c(0, 3)) +
 
 raincloud_2_aligned
 ```
-![Raincloud example](figures/figure_1x1_rm_2.0.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig_4.png)
 
 ### Raincloud 2 x 2 repeated measures
 
@@ -257,7 +253,7 @@ scale_x_continuous(breaks=c(1,2), labels=c("Pre", "Post"), limits=c(0, 3)) +
 
 raincloud_2x2
 ```
-![Raincloud example](figures/figure_2x2_1.0.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig_5.png)
 
 ```r
 raincloud_2x2_spread <- raincloud_2x2_repmes(
@@ -277,7 +273,7 @@ scale_x_continuous(breaks=c(1,2,3,4), labels=c("Pre", "Post", "Pre", "Post"), li
 
 raincloud_2x2_spread
 ```
-![Raincloud example](figures/figure_2x2_2.0.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig_6.png)
 
 ### Raincloud 2 x 3 (repeated measures)
 
@@ -333,7 +329,7 @@ scale_x_continuous(breaks=c(1,2,3), labels=c("T-1", "T-2", "T-3"), limits=c(0, 4
 
 raincloud_2x3_vertical
 ```
-![Raincloud example](figures/figure_2x3_v.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig_7.png)
 
 ```r
 raincloud_2x3_horizontal <- raincloud_2x3_repmes(
@@ -353,5 +349,5 @@ scale_x_continuous(breaks=c(1,2,3), labels=c("T-1", "T-2", "T-3"), limits=c(0, 4
 
 raincloud_2x3_horizontal
 ```
-![Raincloud example](figures/Rplot.png)
+![Raincloud example](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/fig_8.png)
 
