@@ -1,4 +1,4 @@
-# raincloudplots
+# raincloudplots (R package)
 
 <pre>
 Allen, M., Poggiali, D., Whitaker, K., Marshall, T., van Langen, J., R., & Kievit, R. A. (2020). 
