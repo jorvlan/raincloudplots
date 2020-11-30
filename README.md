@@ -90,7 +90,7 @@ scale_x_continuous(breaks=c(1,2), labels=c("Group1", "Group2"), limits=c(0, 3)) 
 
 raincloud_1_h
 ```
-![Raincloud example](https://github.com/jorvlan/open-visualizations/tree/master/R/package_figures/fig1.png)
+![Raincloud example](open-visualizations/tree/master/R/package_figures/fig1.png)
 
 ```r
 raincloud_1_v <- raincloud_1x1(
