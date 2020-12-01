@@ -35,6 +35,8 @@ if (!require(remotes)) {
 }
 remotes::install_github('jorvlan/raincloudplots')
 
+library(raincloudplots)
+
 ```
 ### Raincloud 1 x 1
 
