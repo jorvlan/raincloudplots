@@ -1,5 +1,6 @@
 # raincloudplots 
 ![development version](https://img.shields.io/badge/version-0.1.0-blue)
+[![Language](https://img.shields.io/badge/-R-.svg
 
 ![Raincloud_logo](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/Dia1.png)
 
