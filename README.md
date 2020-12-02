@@ -1,6 +1,7 @@
 # raincloudplots 
 ![development version](https://img.shields.io/badge/version-0.1.0-blue)
 [![R-CMD-check](https://github.com/r-lib/usethis/workflows/R-CMD-check/badge.svg)](https://github.com/r-lib/usethis/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
 ![Raincloud_logo](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/Dia1.png)
 
