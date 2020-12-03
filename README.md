@@ -16,8 +16,9 @@ Raincloud plots: a multi-platform tool for robust data visualization. <b>Wellcom
 </pre>
 
 *Package*
+<pre>
 van Langen, J. (2020). 
-raincloudplots: An R package for raincloudplots. <b>GitHub</b>.
+raincloudplots: An R package. <b>GitHub</b>.
 <a href="https://github.com/jorvlan/raincloudplots">https://github.com/jorvlan/raincloudplots</a>
 </pre>
 
