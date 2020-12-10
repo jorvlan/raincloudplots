@@ -11,7 +11,6 @@ If you use this package for your research, please cite it, thank you.
 <pre>
 Allen, M., Poggiali, D., Whitaker, K., Marshall, T. R., van Langen, J., & Kievit, R. A. (2020). 
 Raincloud plots: a multi-platform tool for robust data visualization. <b>Wellcome open research</b>.
-<a href="https://github.com/jorvlan/raincloudplots">https://github.com/jorvlan/raincloudplots</a>
 (re-submission in prep.)
 </pre>
 
