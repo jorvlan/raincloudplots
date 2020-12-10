@@ -3,7 +3,7 @@
 ![development version](https://img.shields.io/badge/version-0.1.0-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jorvlan/raincloudplots/blob/main/LICENSE)
 
-![Raincloud_logo](https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/Dia1.png)
+
 
 If you use this package for your research, please cite it, thank you.
 
