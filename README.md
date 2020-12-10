@@ -1,4 +1,4 @@
-# raincloudplots <a href='https://github.com/jorvlan/open-visualizations/'><img src='R/package_figures/rainclouds_hexagon.png' align="right" height="139" /></a>
+# raincloudplots <img src="https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/rainclouds_hexagon.png" width="150" height="150" align="right"/>
 
 ![development version](https://img.shields.io/badge/version-0.1.0-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jorvlan/raincloudplots/blob/main/LICENSE)
