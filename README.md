@@ -2,6 +2,7 @@
 
 ![development version](https://img.shields.io/badge/version-0.1.0-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jorvlan/raincloudplots/blob/main/LICENSE)
+[![CRAN status](https://www.r-pkg.org/badges/version/raincloudplots)](https://CRAN.R-project.org/package=raincloudplots)
 
 
 
