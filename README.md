@@ -10,7 +10,7 @@ If you use this package for your research, please cite it, thank you.
 
 **Paper**
 <pre>
-Allen, M., Poggiali, D., Whitaker, K., Marshall, T. R., van Langen, J., & Kievit, R. A. (2020). 
+Allen, M., Poggiali, D., Whitaker, K., Marshall, T. R., van Langen, J., & Kievit, R. A. (2021). 
 Raincloud plots: a multi-platform tool for robust data visualization (Version 2). <b>Wellcome open research</b>.
 (submitted)
 </pre>
