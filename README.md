@@ -23,6 +23,7 @@ It all started with the [pre-print of raincloudplots](https://wellcomeopenresear
 
 - Tested on macOS with R version >= 4.0.3
 - Tested on Windows with R version >= 4.0.3
+- Getting an error with unequal group sizes? We are currently working on this issue, which will be resolved soon.
 - Researchers that would like to visualize more complex repeated measures designs, for instance with more groups and more time-points, please see our extensive tutorials:
     - <a href="https://github.com/jorvlan/open-visualizations">https://github.com/jorvlan/open-visualizations</a> 
     - <a href="https://github.com/RainCloudPlots/RainCloudPlots">https://github.com/RainCloudPlots/RainCloudPlots</a>
