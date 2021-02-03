@@ -1,6 +1,6 @@
 # raincloudplots <img src="https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/rainclouds_highres.png" width="150" height="160" align="right"/>
 
-![development version](https://img.shields.io/badge/version-0.1.0-blue)
+![development version](https://img.shields.io/badge/version-0.2.0-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jorvlan/raincloudplots/blob/main/LICENSE)
 [![CRAN status](https://www.r-pkg.org/badges/version/raincloudplots)](https://CRAN.R-project.org/package=raincloudplots)
 
@@ -27,8 +27,8 @@ It all started with the [pre-print of raincloudplots](https://wellcomeopenresear
     - <a href="https://github.com/jorvlan/open-visualizations">https://github.com/jorvlan/open-visualizations</a> 
     - <a href="https://github.com/RainCloudPlots/RainCloudPlots">https://github.com/RainCloudPlots/RainCloudPlots</a>
 
-### Update February 2021
-- **Getting an error with unequal group sizes? We are currently working on this issue, which will be resolved soon.**
+### Update February 2021 (version 0.2.0)
+- It is now possible to make `raincloudplots` with unequal 'between-group' comparisons. This is not possible for 'repeated-measures' 'between-timepoints (e.g., pre-post) `raincloudplots`.
 
 ### Installation
 
