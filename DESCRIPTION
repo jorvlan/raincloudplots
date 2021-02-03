@@ -1,7 +1,7 @@
 Package: raincloudplots
 Type: Package
 Title: The easy way to create raincloud plots 
-Version: 0.1.0
+Version: 0.2.0
 Author: person("Jordy", "van Langen", email = "jordyvanlangen@gmail.com", role = c("aut", "cre"))
 Maintainer: The package maintainer <jordyvanlangen@gmail.com>
 Description: An easy way to create common raincloud plots (e.g., for repeated measures). 

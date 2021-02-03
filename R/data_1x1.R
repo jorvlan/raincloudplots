@@ -32,13 +32,18 @@ data_1x1 <- function(array_1, array_2, jit_distance = .09, jit_seed = 321) {
   if(!is.numeric(jit_seed))
     stop("Input an integer value for the set.seed() function")
 
-  if (length(array_1) > length(array_2)) {
-    n <- length(array_1)
-  }  else if (length(array_1) == length(array_2)) {
-    n <- length(array_1)
-  }  else {
-    n <- length(array_2)
-  }
+  #if (length(array_1) > length(array_2)) {
+   # n <- length(array_1)
+  #}  else if (length(array_1) == length(array_2)) {
+  #  n <- length(array_1)
+  #}  else {
+  #  n <- length(array_2)
+  #}
+
+  n <- max(length(array_1), length(array_2))
+  length(array_1) <- n
+  length(array_2) <- n
+
 
   if (jit_distance > .2)
     stop("The maximum amount of jitter is 0.2, please specify a lower amount.")
@@ -54,9 +59,12 @@ data_1x1 <- function(array_1, array_2, jit_distance = .09, jit_seed = 321) {
 
   data_1x1$jit <- jitter(data_1x1$x_axis, amount = jit_distance)
 
+  #remove potential NA's
+  if (any(is.na(data_1x1)))
+    data_1x1 <- stats::na.omit(data_1x1)
 
   # return dataframe
   return(data_1x1)
-  ## add labeling option in data.frame function
+
 
 }

@@ -45,22 +45,36 @@ data_2x2 <- function(array_1, array_2, array_3, array_4, array_5, array_6, label
   if(!is.numeric(jit_seed))
     stop("Input an integer value for the set.seed() function")
 
-  if (length(array_1) > length(array_2) & length(array_3) & length(array_4)) {
-    n <- length(array_1)
-  }  else if (length(array_1) == length(array_2) & length(array_3) & length(array_4)) {
-    n <- length(array_1)
-  }  else if (length(array_2) > length(array_1) & length(array_3) & length(array_4)) {
-    n <- length(array_2)
-  }  else if (length(array_3) > length(array_1) & length(array_2) & length(array_4)) {
-    n <- length(array_3)
-  }  else {
-    n <- length(array_4)
-  }
+  #  if (length(array_1) > length(array_2) & length(array_3) & length(array_4)) {
+  #    n <- length(array_1)
+  #  }  else if (length(array_1) == length(array_2) & length(array_3) & length(array_4)) {
+  #    n <- length(array_1)
+  #  }  else if (length(array_2) > length(array_1) & length(array_3) & length(array_4)) {
+  #    n <- length(array_2)
+  #  }  else if (length(array_3) > length(array_1) & length(array_2) & length(array_4)) {
+  #    n <- length(array_3)
+  #  }  else {
+  #    n <- length(array_4)
+  #  }
+
+  n <- max(length(array_1), length(array_2), length(array_3), length(array_4))
+  length(array_1) <- n
+  length(array_2) <- n
+  length(array_3) <- n
+  length(array_4) <- n
+
+  #intra-individual time-points must be of equal group sizes
+  if (length(array_1) != length(array_3) | length(array_2) != length(array_4))
+    stop("Please make sure you don't have unequal group-sizes between time-points")
+
 
   if (jit_distance > .2)
     stop("The maximum amount of jitter is 0.2, please specify a lower amount.")
   # set seed generator
   set.seed(jit_seed)
+
+  ##inter-group sizes can differ
+  #if (length(array_1) != length(array_2) & length(array_3) != length(array_4))
 
   if (missing(array_5) & missing(array_6) & spread_x_ticks == FALSE)
     data_2x2 <- data.frame(y_axis = c(array_1, array_2, array_3, array_4),
@@ -80,7 +94,12 @@ data_2x2 <- function(array_1, array_2, array_3, array_4, array_5, array_6, label
                            id = factor(rep(1:n,2)),
                            group = rep(c(labels[1], labels[2]), each=n))
 
+
   data_2x2$jit <- jitter(data_2x2$x_axis, amount = jit_distance)
+
+  #remove potential NA's
+  if (any(is.na(data_2x2)))
+    data_2x2 <- stats::na.omit(data_2x2)
 
   # return dataframe
   return(data_2x2)
