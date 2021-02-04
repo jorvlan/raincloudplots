@@ -32,7 +32,7 @@ It all started with the [pre-print of raincloudplots](https://wellcomeopenresear
 <pre>
 - <b>February 2021 (version 0.2.0)</b>
 It is now possible to make raincloudplots with unequal 'between-group' comparisons (e.g., group1: 50 data-points, group2: 40 data-points)
-This is not possible for 'repeated-measures' 'between-timepoints (e.g., pre-post) `raincloudplots`.
+This is not possible for 'repeated-measures' between-timepoints (e.g., pre-post) connected by intra-individual lines `raincloudplots`.
 </pre>
 
 ### Installation
