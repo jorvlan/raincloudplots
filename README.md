@@ -1,4 +1,4 @@
-# raincloudplots <img src="https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/drainclouds_highres.png" width="150" height="160" align="right"/>
+# raincloudplots <img src="https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/rainclouds_highres.png" width="150" height="160" align="right"/>
 
 ![development version](https://img.shields.io/badge/version-0.2.0-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jorvlan/raincloudplots/blob/main/LICENSE)
