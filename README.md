@@ -1,5 +1,6 @@
 # raincloudplots <img src="https://github.com/jorvlan/open-visualizations/blob/master/R/package_figures/rainclouds_highres.png" width="150" height="160" align="right"/>
 
+[![R-CMD-check](https://github.com/jorvlan/raincloudplots/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jorvlan/raincloudplots/actions/workflows/R-CMD-check.yaml)
 ![development version](https://img.shields.io/badge/version-0.2.0-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jorvlan/raincloudplots/blob/main/LICENSE)
 [![CRAN status](https://www.r-pkg.org/badges/version/raincloudplots)](https://CRAN.R-project.org/package=raincloudplots)
