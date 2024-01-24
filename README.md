@@ -32,9 +32,9 @@ It all started with the [pre-print of raincloudplots](https://wellcomeopenresear
 
 <pre>
 - <b> January 2024</b>
-    We have written a ggplot2-extension R-package <a href="[ggrain](https://github.com/njudd/ggrain)">ggrain</a>
+    We have written a ggplot2-extension R-package <a href="https://github.com/njudd/ggrain">https://github.com/njudd/ggrain</a>
     which allows users to create Raincloud plots - following the 'Grammar of Graphics'. 
-    Please visit our [`ggrain`](https://github.com/njudd/ggrain) package.
+    Please visit our newest repository at: <a href="https://github.com/njudd/ggrain">https://github.com/njudd/ggrain</a>
 - <b>February 2021 (version 0.2.0)</b>
 It is now possible to make raincloudplots with unequal 'between-group' comparisons (e.g., group1: 50 data-points, group2: 40 data-points)
 This is not possible for 'repeated-measures' between-timepoints (e.g., pre-post) connected by intra-individual lines `raincloudplots`.
