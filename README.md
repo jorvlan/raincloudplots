@@ -32,7 +32,7 @@ It all started with the [pre-print of raincloudplots](https://wellcomeopenresear
 
 <pre>
 - <b> January 2024</b>
-    We have written a ggplot2-extension R-package <a href="ggrain">https://github.com/njudd/ggrain</a>
+    We have written a ggplot2-extension R-package <a href="[ggrain](https://github.com/njudd/ggrain)">ggrain</a>
     which allows users to create Raincloud plots - following the 'Grammar of Graphics'. 
     Please visit our [`ggrain`](https://github.com/njudd/ggrain) package.
 - <b>February 2021 (version 0.2.0)</b>
